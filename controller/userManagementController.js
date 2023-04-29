@@ -106,7 +106,7 @@ const userRegister = async (req, res) => {
             email: email
         })
 
-        if (checkIfAdminAlreadyExists?.userPrivilage === 'Admin') {
+        if (checkIfAdminAlreadyExists && checkIfAdminAlreadyExists.userPrivilage === 'Admin') {
             return res.json({
                 Message: 'Something went wrong Please ask Admin!',
                 Status: null,
